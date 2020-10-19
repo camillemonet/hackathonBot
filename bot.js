@@ -33,7 +33,9 @@ const controller = new Botkit({
 
     adapter: adapter,
 
-    storage
+    storage,
+
+    currentSpeaker: "none"
 });
 
 if (process.env.CMS_URI) {

@@ -483,9 +483,9 @@ var Botkit = {
         }
 
         return that;
-    }
+    },
+    currentSpeaker: "none"
 };
-
 
 (function () {
     // your page initialization code here
