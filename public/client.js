@@ -342,7 +342,6 @@ var Botkit = {
 
         var that = this;
 
-
         that.message_window = document.getElementById("message_window");
 
         that.message_list = document.getElementById("message_list");
@@ -361,6 +360,12 @@ var Botkit = {
             that.input.disabled = false;
             that.sendEvent({
                 name: 'connected'
+            });
+            that.deliverMessage({
+                type: 'initial_message',
+                text: "Welcome to our bot!",
+                user: that.guid,
+                channel: 'socket'
             });
         })
 
@@ -399,7 +404,6 @@ var Botkit = {
                 window.location = message.goto_link;
             }
         });
-
 
         that.on('message', function (message) {
             that.clearReplies();

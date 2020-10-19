@@ -5,6 +5,10 @@
 
 module.exports = function(controller) {
 
+    controller.on('initial_message', async(bot, message) => {
+        await bot.reply(message, `${ message.text } <= initial message`)
+    });
+
     controller.hears('sample','message,direct_message', async(bot, message) => {
         await bot.reply(message, 'I heard a sample message.');
     });
