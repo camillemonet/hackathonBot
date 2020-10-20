@@ -44,6 +44,7 @@ module.exports = function (controller) {
 
   controller.hears("elijah", ["message"], async (bot, message) => {
     controller._config.currentSpeaker = "elijah";
+    await bot.reply(message, "Hello there! This is Elijah. What would you like to talk about?")
     console.log(controller._config.currentSpeaker);
   })
 
