@@ -26,10 +26,7 @@ module.exports = function (controller) {
     })
   });
 
-  controller.hears("kevin", ["message"], async (bot, message) => {
-    controller._config.currentSpeaker = "kevin";
-    console.log(controller._config.currentSpeaker);
-  })
+
 
   controller.hears("camille", ["message"], async (bot, message) => {
     controller._config.currentSpeaker = "camille";
