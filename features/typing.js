@@ -26,6 +26,8 @@ module.exports = function(controller) {
         });
     });
 
+    
+
     controller.addDialog(typing);
 
     controller.hears('typing dialog', 'message', async (bot, message) => {
